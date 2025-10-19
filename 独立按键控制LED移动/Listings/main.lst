@@ -1,0 +1,100 @@
+C51 COMPILER V9.54   MAIN                                                                  10/19/2025 17:04:25 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\keil\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.ls
+                    -t) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <STC89C5xRC.H>
+   2          #include <tntrins.h>
+*** WARNING C318 IN LINE 2 OF main.c: can't open file 'tntrins.h'
+   3          void Delay(unsigned int xms)  //@11.0592MHz
+   4          {
+   5   1          while (xms)
+   6   1      {
+   7   2          
+   8   2      
+   9   2        unsigned char data i, j;
+  10   2      
+  11   2        _nop_();
+  12   2        _nop_();
+  13   2        _nop_();
+  14   2        i = 11;
+  15   2        j = 190;
+  16   2        do
+  17   2        {
+  18   3          while (--j);
+  19   3        } while (--i);
+  20   2          xms--;
+  21   2      }
+  22   1      }
+  23          unsigned char LEDnum = 0;
+  24          int main()
+  25          {
+  26   1          P20 = 0;
+  27   1      while (1)
+  28   1      {
+  29   2          
+  30   2          if(P31 == 0)
+  31   2          {
+  32   3              Delay(15);
+  33   3              while(P31 == 0);
+  34   3              Delay(15);
+  35   3              //P20  = 0;
+  36   3              LEDnum++;
+  37   3              if(LEDnum>=8)
+  38   3                  LEDnum = 0;
+  39   3                  P2 = ~(0x01<<LEDnum);
+  40   3          }
+  41   2              
+  42   2              if(P30 == 0)
+  43   2              {
+  44   3                      Delay(15);
+  45   3                      while (P30 == 0);
+  46   3                      Delay(15);
+  47   3                      if(LEDnum == 0)
+  48   3              {
+  49   4                      LEDnum = 7;
+  50   4                      //P27 = 0;
+  51   4                      P2 = ~(0x01<<LEDnum);
+  52   4              } 
+  53   3              else
+C51 COMPILER V9.54   MAIN                                                                  10/19/2025 17:04:25 PAGE 2   
+
+  54   3              {  
+  55   4                      
+  56   4                      LEDnum--;
+  57   4                      P2 = ~(0x01<<LEDnum);
+  58   4              } 
+  59   3              }
+  60   2      
+  61   2      
+  62   2      
+  63   2      
+  64   2      
+  65   2      
+  66   2      
+  67   2      
+  68   2      
+  69   2      }
+  70   1      
+  71   1      
+  72   1      
+  73   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    129    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
