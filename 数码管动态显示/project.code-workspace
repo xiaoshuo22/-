@@ -1,5 +1,15 @@
 {
-    "folders": [],
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "../数码管的静态显示"
+        },
+        {
+            "path": "../独立按键控制LED移动"
+        }
+    ],
     "settings": {
         "terminal.integrated.shellIntegration.enabled": false,
         "clangd.arguments": [

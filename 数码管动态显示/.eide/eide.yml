@@ -15,13 +15,13 @@ virtualFolder:
 dependenceList: []
 outDir: build
 miscInfo:
-  uid: 0015127f019e466fb85794fdb1843560
+  uid: e95780364781be7df91fac706758b3d0
 targets:
   Target 1:
     cppPreprocessAttrs:
       defineList: []
       incList:
-        - ../../keil/C51/INC/STC
+        - ../../../keil/C51/INC/STC
       libList: []
     excludeList: []
     toolchain: Keil_C51
@@ -47,9 +47,4 @@ targets:
         bin: ""
         commandLine: ""
         eraseChipCommand: ""
-      stcgal:
-        bin: ""
-        eepromImgPath: "null"
-        extraOptions: ""
-        options: .eide/stc.flash.json
-    uploader: stcgal
+    uploader: Custom
