@@ -2,6 +2,12 @@
     "folders": [
         {
             "path": "."
+        },
+        {
+            "path": "../独立按键控制LED"
+        },
+        {
+            "path": "../独立按键控制LED移动"
         }
     ],
     "settings": {
